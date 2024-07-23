@@ -153,7 +153,7 @@ local recovering = false
 local DepthAmount = game.Players.LocalPlayer.PlayerGui.ScreenGui.TopInfoFrame.Depth
 DepthAmount.Changed:connect(function()
     local depth = Split(DepthAmount.Text," ")
-    if tonumber(depth[1]) >= 1200 then
+    if tonumber(depth[1]) >= 4000 then
         recovering = true
         local HumanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
@@ -204,8 +204,8 @@ local Character = game.Players.LocalPlayer.Character
 local SellArea = CFrame.new(41.96064, 15.8550873, -1239.64648, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 while true do
     if HumanoidRootPart then
-        local minp = HumanoidRootPart.CFrame + Vector3.new(-8,-8,-8)
-        local maxp = HumanoidRootPart.CFrame + Vector3.new(8,8,8)
+        local minp = HumanoidRootPart.CFrame + Vector3.new(-20,-20,-20)
+        local maxp = HumanoidRootPart.CFrame + Vector3.new(20,20,20)
         local region = Region3.new(minp.Position, maxp.Position)
         local parts = workspace:FindPartsInRegion3WithWhiteList(region, {game.Workspace.Blocks}, 100) --  ignore part
         for each, block in pairs(parts) do
