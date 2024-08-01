@@ -1,4 +1,4 @@
-getgenv().Name = "Have Fun Mining"
+getgenv().Name = "Use 30K Setup"
 
 task.wait(1)
 
@@ -118,17 +118,7 @@ do
     end
 
     do
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end
-
-    do
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ProdHallow/Miningsimrebirthtracker/main/miningsimrebirthtracker", true))()
-    end
-
-    wait(1)
-
-    do
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ProdHallow/MiningSim1Vipstuff/main/vipstuff", true))()
     end
 
     wait(1)
@@ -224,7 +214,7 @@ do
         local DepthAmount = game.Players.LocalPlayer.PlayerGui.ScreenGui.TopInfoFrame.Depth
         DepthAmount.Changed:connect(function()
             local depth = Split(DepthAmount.Text," ")
-            if tonumber(depth[1]) >= 2500 then
+            if tonumber(depth[1]) >= 1000 then
                 recovering = true
                 local HumanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
                 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
@@ -272,7 +262,7 @@ do
         local RunService = game:GetService("RunService").Stepped
         local HumanoidRootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         local Character = game.Players.LocalPlayer.Character
-        local SellArea = CFrame.new(41.96064, 15.8550873, -1239.64648, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        local SellArea = CFrame.new(41.96064, 14, -1239.64648, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         while true do
             if HumanoidRootPart then
                 local minp = HumanoidRootPart.CFrame + Vector3.new(-10,-10,-10)
