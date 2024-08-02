@@ -289,7 +289,7 @@ do
                                 HumanoidRootPart.Anchored = true
                                 local starttime1 = os.time()
                                 while (HumanoidRootPart.Position - SavedPosition).Magnitude > 1 do
-                                    HumanoidRootPart.CFrame = CFrame.new(18, SavedPosition.Y, 26220)
+                                    HumanoidRootPart.CFrame = CFrame.new(18, SavedPosition.Y + 0.5, 26220)
                                     RunService:Wait()
                                     if os.time() - starttime1 > 5 then
                                         break
